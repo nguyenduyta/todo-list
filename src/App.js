@@ -3,7 +3,7 @@ import './App.css';
 import TodoItem from './components/TodoItem'
 import logo from './image/logo.svg'
 import checkAll from './image/check_all.png'
-
+// import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 class App extends Component {
   constructor() {
     super();
@@ -71,6 +71,7 @@ class App extends Component {
               onChange={this.onChange.bind(this)}
             />
           </div>
+          <div className='App-ListItem'>
             {
               todoItems.length > 0 && todoItems.map((item, key) =>
                 <TodoItem
@@ -80,8 +81,8 @@ class App extends Component {
                 />
               )
             }
-
             {todoItems.length === 0 && <div className='TodoItem'><p>Need add new todo</p></div>}
+          </div>
         </div>
       </div>
     );

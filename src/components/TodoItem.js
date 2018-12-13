@@ -14,8 +14,8 @@ class TodoItem extends Component {
     }
 
     return (
-      <div onClick={onClick} className={className}>
-        <img src={url} width='32' height='32' alt='item todo'/>
+      <div className={className}>
+        <img onClick={onClick} src={url} width='32' height='32' alt='item todo'/>
         <p>{item.title}</p>
       </div>
     )
